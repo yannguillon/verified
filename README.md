@@ -1,3 +1,4 @@
+<img src="https://svgur.com/i/gyQ.svg" width="200"/>
 
-![verified](https://i.imgur.com/fi5Bfnr.png)
-# Web2 social media profiles VERIFIED on-chain.
+### Ownership of web2 social media profiles verified on-chain.
+ Create an immutable link between your wallet and your social urls to enable trustworthy interactions with your community.
