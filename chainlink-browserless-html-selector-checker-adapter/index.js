@@ -26,12 +26,10 @@ const createRequest = (input, callback) => {
   const url = validator.validated.data.url
   const challenge = validator.validated.data.challenge
   const elements = [{ selector: validator.validated.data.selector }]
-  const gotoOptions = {timeout: 20000}
 
   const params = {
     url,
-    elements,
-    gotoOptions
+    elements
   }
 
   // This is where you would add method and headers
@@ -45,13 +43,12 @@ const createRequest = (input, callback) => {
     data: params,
     timeout: 20000
   }
-  console.log(config)
   // The Requester allows API calls be retry in case of timeout
   // or connection failure
   Requester.request(config, customError)
     .then(response => {
       console.log(response)
-      let match = false;
+      let match = false
       if (response.data && response.data.data[0] && response.data.data[0].results[0]) {
         match = response.data.data[0].results[0].html.includes(challenge)
       }
