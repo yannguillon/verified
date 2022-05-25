@@ -58,7 +58,7 @@ const createRequest = (input, callback) => {
       callback(response.status, Requester.success(jobRunID, {data: {result: match}}))
     })
     .catch(error => {
-      callback(500, Requester.errored(jobRunID, error))
+      callback(200, Requester.success(jobRunID, {data: {result: false}}))
     })
 }
 
